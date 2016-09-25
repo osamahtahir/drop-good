@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -139,7 +140,10 @@ public class DropGood extends ApplicationAdapter {
 		tC++;
 		switch (state) {
 		case 5318008:
-			
+			waves.tick();
+
+			if(Gdx.input.isButtonPressed(Keys.ENTER))
+				changeToState(420);
 			break;
 		case 420:
 			for (Cloud c : clouds) {
@@ -219,6 +223,8 @@ public class DropGood extends ApplicationAdapter {
 				}
 			}
 			waves.tick();
+			if(Gdx.input.isButtonPressed(Keys.ENTER))
+				changeToState(5318008);
 			break;
 		}
 	}
@@ -226,6 +232,9 @@ public class DropGood extends ApplicationAdapter {
 	public void draw() {
 		fC++;
 		switch (state) {
+		case 5318008:
+			
+			break;
 		case 420:
 			sb.begin();
 			// strobe.draw(sb);
@@ -278,8 +287,6 @@ public class DropGood extends ApplicationAdapter {
 	@Override
 	public void dispose() {
 
-		//dickbu
-		
 	}
 
 	public void changeToState(int state) {
