@@ -3,6 +3,10 @@
 	<name>Drop Good-core</name>
 	<comment></comment>
 	<projects>
+		<project>Drop Good-android</project>
+		<project>Drop Good-desktop</project>
+		<project>Drop Good-html</project>
+		<project>Drop Good-ios</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

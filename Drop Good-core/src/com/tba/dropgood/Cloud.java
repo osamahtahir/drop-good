@@ -19,7 +19,6 @@ public class Cloud implements Game {
 		
 		w = 600;
 		h = 400;
-		//ss
 		
 		x = -w;
 		y = DropGood.H - (id % 11 + 1) * 50 - h/4;
